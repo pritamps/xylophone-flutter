@@ -4,17 +4,15 @@ import 'package:flutter/material.dart';
 void main() => runApp(XylophoneApp());
 
 class XylophoneApp extends StatelessWidget {
-  Expanded buildKey(int soundNumber, Color color) {
-    return Expanded(
-      child: FlatButton(
-        color: color,
-        onPressed: () {
-          final player = AudioCache();
-          player.play("note$soundNumber.wav");
-        },
-      ),
-    );
-  }
+  Expanded buildKey(int soundNumber, Color color) => Expanded(
+        child: FlatButton(
+          color: color,
+          onPressed: () {
+            final player = AudioCache();
+            player.play("note$soundNumber.wav");
+          },
+        ),
+      );
 
   @override
   Widget build(BuildContext context) {
